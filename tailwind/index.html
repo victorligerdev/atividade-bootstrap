@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lorem Ipsum</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.1.11"></script>
+</head>
+<body class="text-gray-900">
+
+  <!-- Navbar -->
+  <header class="bg-gray-100">
+    <nav class="mx-auto max-w-5xl px-4">
+      <div class="flex items-center justify-between py-3">
+        <a class="text-xl font-medium" href="#">Lorem Ipsum</a>
+        <button id="navToggle" class="rounded border border-gray-300 px-3 py-1 md:hidden" type="button" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span aria-hidden="true">&#9776;</span>
+        </button>
+        <ul id="navMenu" class="hidden w-full flex-col gap-2 pb-3 md:flex md:w-auto md:flex-row md:gap-6 md:pb-0">
+          <li><a class="text-gray-600 hover:text-gray-900" href="#cards">Cards</a></li>
+          <li><a class="text-gray-600 hover:text-gray-900" href="#tabela">Tabela</a></li>
+          <li><a class="text-gray-600 hover:text-gray-900" href="#formulario">Formulário</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="mx-auto max-w-5xl px-4">
+
+    <!-- Carrossel -->
+    <section id="carrossel" class="py-10">
+      <h2 class="mb-4 text-3xl font-medium">Carrossel</h2>
+      <div id="carousel" class="relative" aria-roledescription="carousel">
+        <div>
+          <img src="https://placehold.co/800x300?text=Slide+1" class="w-full" alt="Slide 1" data-slide>
+          <img src="https://placehold.co/800x300?text=Slide+2" class="hidden w-full" alt="Slide 2" data-slide>
+          <img src="https://placehold.co/800x300?text=Slide+3" class="hidden w-full" alt="Slide 3" data-slide>
+        </div>
+        <div class="absolute bottom-3 left-0 right-0 flex justify-center gap-2">
+          <button type="button" class="h-1 w-8 bg-white" data-to="0" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" class="h-1 w-8 bg-white/50" data-to="1" aria-label="Slide 2"></button>
+          <button type="button" class="h-1 w-8 bg-white/50" data-to="2" aria-label="Slide 3"></button>
+        </div>
+        <button id="prev" class="absolute inset-y-0 left-0 w-[15%] text-3xl text-white" type="button">
+          <span aria-hidden="true">&#10094;</span>
+          <span class="sr-only">Anterior</span>
+        </button>
+        <button id="next" class="absolute inset-y-0 right-0 w-[15%] text-3xl text-white" type="button">
+          <span aria-hidden="true">&#10095;</span>
+          <span class="sr-only">Próximo</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Cards -->
+    <section id="cards" class="py-10">
+      <h2 class="mb-4 text-3xl font-medium">Cards</h2>
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <article class="rounded border border-gray-200 p-4">
+          <h3 class="mb-2 text-xl font-medium">Lorem ipsum</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
+        </article>
+        <article class="rounded border border-gray-200 p-4">
+          <h3 class="mb-2 text-xl font-medium">Dolor sit</h3>
+          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+        </article>
+        <article class="rounded border border-gray-200 p-4">
+          <h3 class="mb-2 text-xl font-medium">Amet consectetur</h3>
+          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Tabela -->
+    <section id="tabela" class="py-10">
+      <h2 class="mb-4 text-3xl font-medium">Tabela</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left">
+          <thead class="border-b-2 border-gray-300">
+            <tr>
+              <th scope="col" class="p-2">#</th>
+              <th scope="col" class="p-2">Lorem</th>
+              <th scope="col" class="p-2">Ipsum</th>
+              <th scope="col" class="p-2">Dolor</th>
+            </tr>
+          </thead>
+          <tbody class="[&_td]:p-2 [&_th]:p-2 [&_tr]:border-b [&_tr]:border-gray-200 [&_tr:nth-child(odd)]:bg-gray-100">
+            <tr><th scope="row">1</th><td>Lorem</td><td>Ipsum</td><td>Dolor</td></tr>
+            <tr><th scope="row">2</th><td>Sit</td><td>Amet</td><td>Consectetur</td></tr>
+            <tr><th scope="row">3</th><td>Adipiscing</td><td>Elit</td><td>Sed</td></tr>
+            <tr><th scope="row">4</th><td>Tempor</td><td>Incididunt</td><td>Labore</td></tr>
+            <tr><th scope="row">5</th><td>Magna</td><td>Aliqua</td><td>Veniam</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Formulário -->
+    <section id="formulario" class="py-10">
+      <h2 class="mb-4 text-3xl font-medium">Formulário</h2>
+      <form class="space-y-4">
+        <div>
+          <label for="nome" class="mb-1 block">Nome</label>
+          <input type="text" id="nome" name="nome" class="w-full rounded border border-gray-300 px-3 py-2" required>
+        </div>
+        <div>
+          <label for="email" class="mb-1 block">E-mail</label>
+          <input type="email" id="email" name="email" class="w-full rounded border border-gray-300 px-3 py-2" required>
+        </div>
+        <div>
+          <label for="assunto" class="mb-1 block">Assunto</label>
+          <input type="text" id="assunto" name="assunto" class="w-full rounded border border-gray-300 px-3 py-2" required>
+        </div>
+        <div>
+          <label for="mensagem" class="mb-1 block">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" rows="4" class="w-full rounded border border-gray-300 px-3 py-2" required></textarea>
+        </div>
+        <button type="submit" class="rounded bg-blue-600 px-4 py-2 text-white hover:bg-blue-700">Enviar</button>
+      </form>
+    </section>
+
+    <!-- Modal -->
+    <section id="modal" class="py-10">
+      <h2 class="mb-4 text-3xl font-medium">Modal</h2>
+      <button type="button" class="rounded bg-blue-600 px-4 py-2 text-white hover:bg-blue-700" onclick="document.getElementById('exampleModal').showModal()">
+        Abrir modal
+      </button>
+      <dialog id="exampleModal" class="m-auto w-full max-w-lg rounded backdrop:bg-black/50" aria-labelledby="exampleModalLabel">
+        <form method="dialog">
+          <div class="flex items-center justify-between border-b border-gray-200 p-4">
+            <h3 id="exampleModalLabel" class="text-xl font-medium">Lorem ipsum</h3>
+            <button class="text-2xl leading-none text-gray-500" aria-label="Close">&times;</button>
+          </div>
+          <div class="p-4">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+          </div>
+          <div class="flex justify-end gap-2 border-t border-gray-200 p-4">
+            <button class="rounded bg-gray-500 px-4 py-2 text-white hover:bg-gray-600">Fechar</button>
+            <button class="rounded bg-blue-600 px-4 py-2 text-white hover:bg-blue-700">Confirmar</button>
+          </div>
+        </form>
+      </dialog>
+    </section>
+
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="bg-gray-100 py-4">
+    <p class="text-center">&copy; 2026 Lorem Ipsum. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- JS mínimo: menu mobile e carrossel -->
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const menu = document.getElementById('navMenu');
+    toggle.addEventListener('click', () => {
+      const open = menu.classList.toggle('hidden') === false;
+      menu.classList.toggle('flex', open);
+      toggle.setAttribute('aria-expanded', open);
+    });
+
+    const slides = document.querySelectorAll('[data-slide]');
+    const dots = document.querySelectorAll('[data-to]');
+    let current = 0;
+    function show(i) {
+      current = (i + slides.length) % slides.length;
+      slides.forEach((s, n) => s.classList.toggle('hidden', n !== current));
+      dots.forEach((d, n) => {
+        d.classList.toggle('bg-white', n === current);
+        d.classList.toggle('bg-white/50', n !== current);
+        n === current ? d.setAttribute('aria-current', 'true') : d.removeAttribute('aria-current');
+      });
+    }
+    document.getElementById('prev').addEventListener('click', () => show(current - 1));
+    document.getElementById('next').addEventListener('click', () => show(current + 1));
+    dots.forEach(d => d.addEventListener('click', () => show(+d.dataset.to)));
+  </script>
+</body>
+</html>
